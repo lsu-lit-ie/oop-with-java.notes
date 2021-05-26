@@ -26,6 +26,7 @@
 	<link rel="stylesheet" href="reveal.js/dist/reveal.css" />
 	<link rel="stylesheet" href="reveal.js/dist/theme/black.css" id="theme" />
 	<link rel="stylesheet" href="reveal.js/plugin/highlight/monokai.css" id="highlight-theme" />
+	<link rel="stylesheet" href="reveal.js/plugin/copycode/copycode.css">
 	<link rel="stylesheet" href="src/css/stylesheet.css" />
 	<title>Introduction to Object Oriented Programming with Java</title>
 </head>
@@ -55,97 +56,92 @@
 				</footer>
 			</section>
 			<section>
-				<section id="CodeExampleSlide">
-					<pre><code class="language-java hljs" data-line-numbers="1|3|4,11|5|7|8,10|9">package ie.lit.learningjava;
-
-public class HelloWorld
-{
-    static String message = "Hello World.";
-
-    public static void main(String[] args)
-    {
-        System.out.print(message);
-    }
-}</code></pre>
-					<p class="fragment" data-fragment-index="1">Defines the name of a package. Package names are by convention lowercase. they have no spaces</p>
-					<p class="fragment" data-fragment-index="2">Defines the name of a the class. Class names are by convention Title case</p>
-				</section>
-				<section id="CodeExampleExplaination">
-					<h2>Explaination</h2>
-					<pre><code class="language-java hljs">package ie.lit.learningjava;</code></pre>
-
-					<p class=""></p>
-					<pre><code class="language-java hljs">public class HelloWorld</code></pre>
-					<p>Defines the name of a the class. Class names are by convention Title case.</p>
-					<pre><code class="language-java hljs">public static void main(String[] args)</code></pre>
-					<p></p>
-					<pre><code class="language-java hljs">System.out.print(message);</code></pre>
-					<p>.</p>
-				</section>
-			</section>
-			<section>
-				<section id="TheBareMinimum">
-					<h2>The Bare Minimum</h2>
-
-					<p>This program does nothing, but it is a program that you can run.</p>
-					<pre>
-<code class="language-java hljs" data-line-numbers="1-8|5-7">package ie.lit.learningjava;
-
-public class BareMinimumProgram
-{
-    public static void main(String[] args)
-    {
-    }
-}</code>
-				</pre>
-				</section>
-			</section>
-			<section>
-				<section data-id="8b20c2636ed1ce66d453b47eb32a9cac" data-auto-animate="" id="title">
-					<h2>Hello World</h2>
-					<p>HelloWorld.java</p>
-
+				<section id="HelloWorldExample" data-transition="fade-out">
+					<h2>The Hello World Example</h2>
 					<div class="sl-block" data-block-type="code">
-						<div class="sl-block-content notranslate fragment" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;" data-fragment-index="0">
-							<pre class="java">
-							<code data-line-numbers="1-11|1|3|4,9|5|6,8|7" data-fragment-index="1">package ie.lit.learningjava;
+						<div class="sl-block-content notranslate">
+							<pre class="java"><code data-line-numbers="1-9">package ie.lit.learningjava;
 
-public class HelloWorld
+public class HelloWorldExample
 {
-    public static void main(String[] args)
-    {
-        System.out.print("Hello World.");
-    }
-}</code>
-						</pre>
+	public static void main(String[] args)
+	{
+		System.out.print("Hello World.");
+	}
+}
+</code></pre>
 						</div>
 					</div>
-					<div class="r-stack">
+					<div>Output:</div>
+					<pre data-cc="false"><samp>Hello World.</samp></pre>
+				</section>
+				<section id="HelloWorldExampleBreakDown" data-transition="fade-in slide-out">
+					<h2>The Hello World Example</h2>
+					<div class="sl-block" data-block-type="code">
+						<div class="sl-block-content notranslate">
+							<pre class="java" data-cc="false"><code data-line-numbers="1-11|1|3|4,9|5|6,8|7" data-fragment-index="1">package ie.lit.learningjava;
+
+public class HelloWorldExample
+{
+	public static void main(String[] args)
+	{
+		System.out.print("Hello World.");
+	}
+}
+</code></pre>
+						</div>
+					</div>
+					<div class="r-stack" style="width: 90%;margin: 20px auto;font-size:0.7em;text-align: justify;">
 						<p class="fragment fade-in-then-out" data-fragment-index="1">Line 1: Defines the name of a package. Package names are by convention lowercase. they have no spaces.</p>
 						<p class="fragment fade-in-then-out" data-fragment-index="2">Line 3: Defines the name of a the class. Class names are by convention Title case.</p>
 						<p class="fragment fade-in-then-out" data-fragment-index="3">Lines 4 - 9: The braces define the body of the class. All the code inside the braces are part of this class.</p>
 						<p class="fragment fade-in-then-out" data-fragment-index="4">Line 5: Defines the signature of a method. A Java program requires at least one class with a method with this signature.</p>
 						<p class="fragment fade-in-then-out" data-fragment-index="5">Lines 6 - 8: The braces define the body of the method. All the code inside the braces are part of the method.</p>
 						<p class="fragment fade-in-then-out" data-fragment-index="6">Line 7: This line of code prints out "Hello World" to the console.</p>
-						<pre class="fragment fade-in" data-fragment-index="7"><samp>Hello World.</samp></pre>
 					</div>
+				</section>
+			</section>
+			<section>
+				<section id="TheBareMinimum">
+					<h2>The Bare Minimum Application</h2>
+					<p>This application does nothing, but it is a application that you can run.</p>
+					<pre><code class="language-java hljs" data-line-numbers="1-8|5-7">package ie.lit.learningjava;
+
+public class BareMinimumApplication
+{
+    public static void main(String[] args)
+    {
+    }
+}
+</code></pre>
 				</section>
 			</section>
 		</div>
 	</div>
 	<div id="RevealScripts">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
 		<script src="reveal.js/dist/reveal.js"></script>
-		<script src="reveal.js/plugin/notes/notes.js"></script>
-		<script src="reveal.js/plugin/markdown/markdown.js"></script>
+		<script src="reveal.js/plugin/copycode/copycode.js"></script>
 		<script src="reveal.js/plugin/highlight/highlight.js"></script>
+		<script src="reveal.js/plugin/markdown/markdown.js"></script>
+		<script src="reveal.js/plugin/notes/notes.js"></script>
 		<script>
 			Reveal.initialize(
 				{
+					copycode: {
+						copy: "Copy",
+						copybg: "orange",
+						copycolor: "black",
+						copied: "Copied!",
+						copiedbg: "green",
+						copiedcolor: "white",
+						timeout: 1000,
+					},
 					center: false,
 					hash: true,
-					plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
-					slideNumber: "c/t",
 					mouseWheel: true,
+					plugins: [CopyCode, RevealHighlight, RevealMarkdown, RevealNotes],
+					slideNumber: "c/t",
 				}
 			);
 		</script>
