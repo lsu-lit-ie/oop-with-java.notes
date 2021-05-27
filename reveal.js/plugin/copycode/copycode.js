@@ -54,7 +54,7 @@
 	    });
 	    var clipboard = new ClipboardJS(".codeblock > button", {
 	      target: function target(trigger) {
-	        return trigger.nextElementSibling;
+	        return trigger.nextElementSibling.firstChild;
 	      }
 	    });
 	    clipboard.on("success", function (e) {
